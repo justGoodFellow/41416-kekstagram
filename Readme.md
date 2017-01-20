@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Боднарюк](https://up.htmlacademy.ru/javascript/8/user/41416).
-* Наставник: `Неизвестно`.
+* Наставник: `Константин Дарк`.
 
 ---
 

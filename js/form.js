@@ -3,9 +3,9 @@
 var uploadSelectImage = document.querySelector('#upload-select-image');
 var uploadFile = uploadSelectImage.querySelector('#upload-file');
 var uploadOverlay = document.querySelector('.upload-overlay');
-var FormCansel = uploadOverlay.querySelector('.upload-form-cancel');
+var formCansel = uploadOverlay.querySelector('.upload-form-cancel');
 
-FormCansel.addEventListener('click', function () {
+formCansel.addEventListener('click', function () {
   uploadOverlay.classList.add('invisible');
   uploadSelectImage.classList.remove('invisible');
 });

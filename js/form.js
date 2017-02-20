@@ -1,8 +1,10 @@
 'use strict';
 
-document.querySelector('#upload-file').addEventListener('change', function () {
-  var uploadOverlay = document.querySelector('.upload-overlay');
-  var uploadSelectImage = document.querySelector('#upload-select-image');
+var uploadSelectImage = document.querySelector('#upload-select-image');
+var uploadFile = uploadSelectImage.querySelector('#upload-file');
+var uploadOverlay = document.querySelector('.upload-overlay');
+
+uploadFile.addEventListener('change', function () {
 
   uploadOverlay.classList.remove('invisible');
   uploadSelectImage.classList.add('invisible');
@@ -12,8 +14,8 @@ document.querySelector('#upload-file').addEventListener('change', function () {
     uploadSelectImage.classList.remove('invisible');
   });
 
-  var image = document.querySelector('.filter-image-preview');
-  var filters = document.querySelectorAll('input[name="upload-filter"]');
+  var image = uploadOverlay.querySelector('.filter-image-preview');
+  var filters = uploadOverlay.querySelectorAll('input[name="upload-filter"]');
 
   for (var i = 0; i < filters.length; i++) {
     filters[i].addEventListener('click', function (event) {
@@ -21,9 +23,9 @@ document.querySelector('#upload-file').addEventListener('change', function () {
     });
   }
 
-  var btnPlus = document.querySelector('.upload-resize-controls-button-inc');
-  var btnMinus = document.querySelector('.upload-resize-controls-button-dec');
-  var imageSize = document.querySelector('.upload-resize-controls-value');
+  var btnPlus = uploadOverlay.querySelector('.upload-resize-controls-button-inc');
+  var btnMinus = uploadOverlay.querySelector('.upload-resize-controls-button-dec');
+  var imageSize = uploadOverlay.querySelector('.upload-resize-controls-value');
 
 
   btnMinus.addEventListener('click', function () {
